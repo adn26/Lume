@@ -17,7 +17,7 @@ env = Env()
 Env.read_env()
 
 ENVIRONMENT = env('ENVIRONMENT', default='production')
-# ENVIRONMENT = 'production'
+ENVIRONMENT = 'production'
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -62,7 +62,6 @@ INSTALLED_APPS = [
     'cloudinary',
     'allauth',
     'allauth.account',
-    'allauth.socialaccount',
     'django_htmx',
     'a_home',
     'a_users',
