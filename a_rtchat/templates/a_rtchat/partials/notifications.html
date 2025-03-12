@@ -1,0 +1,31 @@
+<ul id="notis-list" class="hoverlist [&>li>a]:justify-end">
+    {% for message in unread_messages %}
+      <li class="relative">
+        <span class="blue-dot absolute top-1 left-1"></span>
+        {% if message.group.is_private %}
+          {% for member in message.group.members.all %}
+            {% if member != user %}
+              <a href="{% url 'chatroom' message.group.group_name %}"
+                 hx-get="{% url 'mark_seen' message.id %}"
+                 hx-trigger="click"
+                 hx-swap="none">
+                {{ member.profile.name }}
+              </a>
+            {% endif %}
+          {% endfor %}
+        {% else %}
+          <a href="{% url 'chatroom' message.group.group_name %}"
+             hx-get="{% url 'mark_seen' message.id %}"
+             hx-trigger="click"
+             hx-swap="none">
+            {{ message.group.groupchat_name|default:message.group.group_name }}
+          </a>
+        {% endif %}
+      </li>
+    {% empty %}
+      <li class="relative">
+        <span>No new notifications.</span>
+      </li>
+    {% endfor %}
+  </ul>
+  

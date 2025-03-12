@@ -1,0 +1,63 @@
+{% extends 'layouts/box.html' %}
+
+{% block content %}
+
+<h1>Edit Chat</h1>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form }}
+
+    <div class="my-4">
+
+    <!-- display list of members -->
+    <h2>Members</h2>
+    {% for member in chat_group.members.all %}
+    <div class="flex justify-between items-center">
+        <div class="flex items-center gap-2 py-2">
+            <img class="w-14 h-14 rounded-full object-cover" src="{{ member.profile.avatar }}" />
+            <div>
+                <span class="font-bold">{{ member.profile.name }}</span> 
+                <span class="text-sm font-light text-gray-600">@{{ member.username }}</span>
+            </div>
+        </div>
+
+        <!-- showing a checkbox to ban members -->
+        {% if member != chat_group.admin %}
+        <div class="inline-block pr-4">
+            <input type="checkbox" name="ban_members" value="{{ member.id }}" class="relative p-5 cursor-pointer appearance-none rounded-md border after:absolute after:left-0 after:top-0 after:h-full after:w-full after:bg-[url('https://img.icons8.com/ffffff/32/multiply.png')] after:bg-center checked:bg-red-500 hover:ring hover:ring-gray-300 focus:outline-none" />
+        </div>
+        {% endif %}
+    </div> 
+    {% endfor %}
+
+    <!-- display list of banned members and unban them -->
+    <h2>Banned Members</h2>
+    {% for banned_member in chat_group.banned_users.all %}
+    <div class="flex justify-between items-center">
+        <div class="flex items-center gap-2 py-2">
+            <img class="w-14 h-14 rounded-full object-cover" src="{{ banned_member.profile.avatar }}" />
+            <div>
+                <span class="font-bold">{{ banned_member.profile.name }}</span>
+                <span class="text-sm font-light text-gray-600">@{{ banned_member.username }}</span>
+            </div>
+        </div>
+        <div class="inline-block pr-4 flex items-center gap-2">
+            <input type="checkbox" name="unban_members" value="{{ banned_member.id }}" class="cursor-pointer" />
+            <label for="unban_members">Unban</label>
+        </div>
+    </div>
+    {% endfor %}
+    {% if chat_group.banned_users.all %}
+    <p class="text-gray-500 text-sm">Tick the checkbox to unban a user.</p>
+    {% else %}
+    <p class="text-gray-500 text-sm">This list shows all banned users.</p>
+    {% endif %}
+    </div>
+
+    <button class="mt-2" type="submit">Update</button>
+</form>
+
+<a href="{% url 'chatroom-delete' chat_group.group_name %}" class="inline-block flex justify-end mt-4 text-gray-400 hover:text-red-500" >Delete Chatroom</a>
+
+{% endblock %}

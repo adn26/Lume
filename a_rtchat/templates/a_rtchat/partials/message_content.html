@@ -1,0 +1,19 @@
+{% if message.body %}
+    <span>{{ message.body }}</span>
+
+{% elif message.file %}
+    <!-- if the file is an image display it as an image -->
+    {% if message.is_image %}
+    <a href="{{ message.file.url }}" 
+    data-lightbox="chat-images"
+    data-title="{{ message.filename }}"
+    class="lightbox-link">
+        <img class="max-w-72 min-w-8 rounded-lg" 
+            src="{{ message.file.url }}" 
+            alt="{{ message.filename }}">
+    </a>
+    <!-- if the file is not an image make it a downloadable file -->
+    {% else %}
+        &#x1F4CE; <a href="{{ message.file.url }}" class="cusror-pointer italic hover:underline" download>{{ message.filename }}</a>
+    {% endif %}
+{% endif %}
