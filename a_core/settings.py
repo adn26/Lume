@@ -17,7 +17,7 @@ env = Env()
 Env.read_env()
 
 ENVIRONMENT = env('ENVIRONMENT', default='production')
-# ENVIRONMENT = 'production'
+ENVIRONMENT = 'production'
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -58,8 +58,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django_cleanup.apps.CleanupConfig',
     'django.contrib.sites',
-    'cloudinary_storage',
-    'cloudinary',
+    'storages',
     'allauth',
     'allauth.account',
     'django_htmx',
@@ -120,23 +119,13 @@ if ENVIRONMENT=='development':
     }
 else:
     CHANNEL_LAYERS = {
-         "default":{
-              "BACKEND":"channels_redis.core.RedisChannelLayer",
-              "CONFIG":{
-                   "hosts":[(env('REDIS_URL'))],
-              }
-         }
+        "default": {
+            "BACKEND": "channels_redis.core.RedisChannelLayer",
+            "CONFIG": {
+                "hosts":[(env('REDIS_URL'))],
+            },
+        },
     }
-
-# CHANNEL_LAYERS = {
-#     "default": {
-#         "BACKEND": "channels_redis.core.RedisChannelLayer",
-#         "CONFIG": {
-#             "hosts": [('redis://default:xTtybKEyIhXLECauApPkSPfiWgQzyJMS@turntable.proxy.rlwy.net:14497')],
-#         },
-#     },
-# }
-
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
@@ -198,10 +187,26 @@ MEDIA_URL = 'media/'
 if ENVIRONMENT == 'development':
 	MEDIA_ROOT = BASE_DIR / 'media'
 else:
-	DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
-	CLOUDINARY_STORAGE = {
-		'CLOUDINARY_URL': env('CLOUDINARY_URL')
+     STORAGES = {
+    "default": {
+        "BACKEND": "storages.backends.s3.S3Storage",
+    },
+    "staticfiles": {
+        "BACKEND": "django.contrib.staticfiles.storage.StaticFilesStorage",
+        },
     }
+     AWS_DEFAULT_ACL = 'public-read'
+     AWS_ACCESS_KEY_ID = env('AWS_ACCESS_KEY_ID')
+     AWS_SECRET_ACCESS_KEY=env('AWS_SECRET_ACCESS_KEY')
+     AWS_STORAGE_BUCKET_NAME=env('AWS_STORAGE_BUCKET_NAME')
+     AWS_S3_REGION_NAME = env('AWS_REGION')
+     AWS_S3_CUSTOM_DOMAIN = f"{env('AWS_STORAGE_BUCKET_NAME')}.s3.amazonaws.com"
+     
+
+	# DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+	# CLOUDINARY_STORAGE = {
+	# 	'CLOUDINARY_URL': env('CLOUDINARY_URL')
+    # }
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field

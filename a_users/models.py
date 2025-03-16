@@ -19,6 +19,13 @@ class Profile(models.Model):
     
     @property
     def avatar(self):
-        if self.image:
-            return self.image.url
+        if self.image and self.image.name:
+            try:
+                return self.image.url
+            except Exception as e:
+                print(f"Error generating URL: {e}")
+                # Fallback to direct URL
+                bucket_name = settings.AWS_STORAGE_BUCKET_NAME
+                region = settings.AWS_S3_REGION_NAME
+                return f"https://{bucket_name}.s3.{region}.amazonaws.com/{self.image.name}"
         return f'{settings.STATIC_URL}images/avatar.svg'

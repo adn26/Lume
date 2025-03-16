@@ -52,7 +52,7 @@
             <!--profile dropdown-->
             <li x-data="{ dropdownOpen: false }" class="relative">
                 <a @click="dropdownOpen = !dropdownOpen" @click.away="dropdownOpen = false" class="cursor-pointer select-none">
-                    <img class="h-8 w-8 rounded-full object-cover" src="{{ request.user.profile.avatar }}" alt="Avatar" />
+                    <img class="h-8 w-8 rounded-full object-cover" src="https://lumeawsbucket.s3.ap-south-1.amazonaws.com/{{ request.user.profile.image.name }}" alt="Avatar" />
                     {{ request.user.profile.name }}
                     <img x-bind:class="dropdownOpen && 'rotate-180 duration-300'" class="w-4" src="https://img.icons8.com/small/32/ffffff/expand-arrow.png" alt="Dropdown" />
                 </a>
