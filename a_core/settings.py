@@ -36,7 +36,7 @@ if ENVIRONMENT == 'development':
 else:
     DEBUG = False
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '13.201.72.183','lume-wqxk.onrender.com']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'lume-wqxk.onrender.com']
 
 INTERNAL_IPS = (
       '127.0.0.1',
