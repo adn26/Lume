@@ -18,7 +18,7 @@ This project was initially built by following a tutorial by **[Andreas Jud](http
 
 ## **🛠️ Tech Stack**  
 
-- **Backend:** Django, Django Channels, Django REST Framework  
+- **Backend:** Django, Django Channels 
 - **Frontend:** HTMX, Tailwind CSS  
 - **Database:** PostgreSQL / SQLite (dev)  
 - **WebSockets:** Django Channels, Redis  
