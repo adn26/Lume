@@ -4,7 +4,6 @@ Lume is a real-time group chat application built with **Django, WebSockets, HTMX
 
 This project was initially built by following a tutorial by **[Andreas Jud](https://www.youtube.com/@ajudmeister)**, with additional custom features added by me.  
 
-![Lume Chat App]("https://github.com/user-attachments/assets/f1237663-26d6-4257-be8c-e5dda1fd6277")  
 
 ## **🚀 Features**  
 
