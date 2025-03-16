@@ -43,7 +43,7 @@ INTERNAL_IPS = (
       'localhost:8000'
 )
 
-CSRF_TRUSTED_ORIGINS = [ '13.201.72.183','lume-wqxk.onrender.com' ]
+CSRF_TRUSTED_ORIGINS = [ 'https://lume-wqxk.onrender.com' ]
 
 
 # Application definition
