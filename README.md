@@ -1,11 +1,11 @@
-# **Lume - Real-Time Group Chat App** 💬🚀  
+# **Lume - The Real-Time Chat App** 💬  
 
 Lume is a real-time group chat application built with **Django, WebSockets, HTMX, and AWS**. It allows users to create unique chat groups, send messages instantly, and manage group memberships with permissions.  
 
 This project was initially built by following a tutorial by **[Andreas Jud](https://www.youtube.com/@ajudmeister)**, with additional custom features added by me.  
 
 
-## **🚀 Features**  
+## **✨ Features**  
 
 - **Real-time messaging** with **WebSockets**  
 - **Create & join** chat groups with unique short UIDs  
@@ -46,7 +46,7 @@ This project was initially built by following a tutorial by **[Andreas Jud](http
 ### **1️⃣ Clone the Repo**  
 ```bash
 git clone https://github.com/adn26/Lume-TheChatApp.git
-cd lume-chat
+cd Lume
 ```
 
 ### **2️⃣Install Dependencies**
