@@ -29,13 +29,18 @@ This project was initially built by following a tutorial by **[Andreas Jud](http
  <img width="959" alt="public_chat" src="https://github.com/user-attachments/assets/f1237663-26d6-4257-be8c-e5dda1fd6277" />
  <p>The public chat</p>
  <br>
-<img width="129" alt="notis" src="https://github.com/user-attachments/assets/122e2901-5193-4aa6-978d-049ca517d0c2" /><br>
-<img width="476" alt="edit_profile" src="https://github.com/user-attachments/assets/768901e6-7bc3-4f72-94fd-aa4eee155952" />
+<img width="129" alt="notis" src="https://github.com/user-attachments/assets/122e2901-5193-4aa6-978d-049ca517d0c2" />
 <p>Notifications feature</p>
+<br><br>
+<img width="476" alt="edit_profile" src="https://github.com/user-attachments/assets/768901e6-7bc3-4f72-94fd-aa4eee155952" />
+<p>Edit profile</p>
 <br>
-
-<img width="476" alt="create_groupchat" src="https://github.com/user-attachments/assets/c10ecdb6-6fb1-4754-97eb-974f441b6b6c" /><br>
-<img width="476" alt="created_chat" src="https://github.com/user-attachments/assets/258917a8-1c67-4ba5-9ffc-1fc44eac82fa" /><br>
+<img width="476" alt="create_groupchat" src="https://github.com/user-attachments/assets/c10ecdb6-6fb1-4754-97eb-974f441b6b6c" />
+<p>Create chat feature</p>
+<br>
+<img width="476" alt="created_chat" src="https://github.com/user-attachments/assets/258917a8-1c67-4ba5-9ffc-1fc44eac82fa" />
+<p>Created chat</p>
+<br>
 
 ## **🚀 Getting Started**  
 
