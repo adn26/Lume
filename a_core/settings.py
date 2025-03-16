@@ -36,14 +36,14 @@ if ENVIRONMENT == 'development':
 else:
     DEBUG = False
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '13.201.72.183']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '13.201.72.183','lume-wqxk.onrender.com']
 
 INTERNAL_IPS = (
       '127.0.0.1',
       'localhost:8000'
 )
 
-CSRF_TRUSTED_ORIGINS = [ '13.201.72.183' ]
+CSRF_TRUSTED_ORIGINS = [ '13.201.72.183','lume-wqxk.onrender.com' ]
 
 
 # Application definition
