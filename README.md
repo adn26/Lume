@@ -22,7 +22,7 @@ This project was initially built by following a tutorial by **[Andreas Jud](http
 - **Frontend:** HTMX, Tailwind CSS  
 - **Database:** PostgreSQL / SQLite (dev)  
 - **WebSockets:** Django Channels, Redis  
-- **Storage & Deployment:** AWS (S3, EC2), Whitenoise, Render(For Deployment)
+- **Storage & Deployment:** AWS (S3 buckets), Whitenoise, Render(For Deployment)
 
 ## **📸 Screenshots**  
  <img width="959" alt="public_chat" src="https://github.com/user-attachments/assets/f1237663-26d6-4257-be8c-e5dda1fd6277" />
