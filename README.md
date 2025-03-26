@@ -82,7 +82,11 @@ Go to http://localhost:8000
 ## ✨ Custom Features I Added  
 - ✅ **Ban/Unban logic** – Group admins can ban/unban users  
 - ✅ **Notification logic** – Users receive notifications for new messages  
-- ✅ **Improved UI/UX** – Added animations, improved layout  
+- ✅ **Improved UI/UX** – Added animations, improved layout
+
+## 🎥 Demo Video
+
+[![Watch the Demo](https://img.youtube.com/vi/_7UvaFM0ics/maxresdefault.jpg)](https://www.youtube.com/watch?v=_7UvaFM0ics) 
 
 ## 🛠️ Future Improvements  
 - ✅ **Voice messaging**  
