@@ -96,7 +96,7 @@ Go to http://localhost:8000
 
 ## 📜 Credits & License  
 - Based on a tutorial by **[Andreas Jud](https://www.youtube.com/@ajudmeister)**  
-- Custom features and enhancements by **Adnan**  
+- Custom features and enhancements by **Adnan(me)**  
 - Licensed under **MIT License** – use it freely!  
 
 ## 🤝 Contributing  
