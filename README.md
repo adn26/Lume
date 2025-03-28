@@ -84,7 +84,7 @@ Go to http://localhost:8000
 - ✅ **Notification logic** – Users receive notifications for new messages  
 - ✅ **Improved UI/UX** – Added animations, improved layout
 
-## 🎥 Demo Video
+## 🎥 Demo Video (click on thumbnail to watch)
 
 [![Watch the Demo](https://img.youtube.com/vi/_7UvaFM0ics/maxresdefault.jpg)](https://www.youtube.com/watch?v=_7UvaFM0ics) 
 
